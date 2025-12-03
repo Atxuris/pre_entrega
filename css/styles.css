@@ -28,7 +28,7 @@ header {
     background-color: #2a2a2a;
 }
 .logo {
-    width: 15%;
+    width: 12%;
     height: auto;
 }
 h1{
@@ -173,7 +173,7 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2.5rem;
     background-color: #2a2a2a;
     padding: 2rem;
     width: 80%;
@@ -203,7 +203,7 @@ h2{
 .cards {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 80%;
     height: auto;
     gap: 1rem;
     justify-content: center;
@@ -479,18 +479,15 @@ footer {
         width: 100%;
         height: 100%;
         gap: 1rem;
-        background-color: orange;
     }
     .medios{
         width: 100%;
-        background-color: rgb(21, 7, 89);
     }
     .medios h3{
         font-size: 1.4rem;
     }
     .medios p{
         font-size: 1rem;
-        background-color: rgb(6, 99, 180);
     }
     .section-1, .section-2, .section-3 {
         width: 90%;
@@ -517,14 +514,12 @@ footer {
         width: 100%;
         height: auto;
         gap: 1.5rem;
-        background-color: burlywood;
     }
     .logo {
         width: 30%;
         margin: 0;
     }
     .menu-container{
-        background-color: lightcoral;
         width: 60%;
     }
     .search-input {
@@ -593,7 +588,6 @@ footer {
     .menu-container {
         width: 100%;
         gap: 0.5rem;
-        background-color: lightpink;
     }
     .search-container {
         width: 100%;
