@@ -9,6 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #1c1a1a;
     color: #f7e7e7;
+    width: 100%;
 }
 html {
     scroll-behavior: smooth;
@@ -75,6 +76,8 @@ nav {
     gap: 1.8rem;
     justify-content: right;
     align-items: center;
+    max-width: 800px;
+    background-color: green;
 }
 a {
     color: #f7e7e7;
@@ -122,6 +125,11 @@ main {
 .banner h3::before{
     position: absolute;
     z-index: 2;
+}
+#banner_text {
+    font-size: 3.5rem;
+    color: #f7e7e7;
+    max-width: 700px;
 }
 .medios_de_pago{
     width: 100%;
@@ -265,19 +273,35 @@ footer {
         padding: 1rem 2rem;
     }
     .logo {
-        width: 20%;
-        margin: 0 0 0 3rem;     
+        width: 15%;
+        margin: 0 0 0 1rem;     
     }
     .menu-container {
-        width: 400px;
+        width: 300px;
         gap: 0.2rem;
     }
-    h1 {
-        font-size: 1.3rem;
-
+    .search-input {
+        width: 150px;
+    } 
     nav{
         gap: 1rem;
         width: 100px;
+    }
+    .nav-menu {
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    a {
+        font-size: 0.9rem;
+    } 
+    #banner_text {
+        font-size: 2.8rem;
+        max-width: 500px;
+    }
+    h1 {
+        font-size: 1.2rem;
     }
     .medios_de_pago {
         flex-direction: column;
@@ -285,8 +309,67 @@ footer {
         height: auto;
         gap: 2rem;
     }
+    .section-1, .section-2, .section-3 {
+        width: 90%;
+        padding: 2rem;
+    }
     .cards {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 }
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .logo {
+        width: 30%;
+        margin: 0;
+    }
+    .menu-container {
+        width: 100%;
+        gap: 0.5rem;
+    }
+    .search-container {
+        width: 100%;
+    }
+    .search-input {
+        width: 70%;
+    }
+    .nav-menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+    }
+    #banner_text {
+        font-size: 2rem;
+        max-width: 300px;
+    }
+    .medios_de_pago {
+        max-width: 360px;
+        gap: 1rem;
+    }
+    .medios h3 {
+        font-size: 1.8rem;
+    }   
+    .medios p {
+        font-size: 1rem;
+    }   
+    .section-1, .section-2, .section-3 {
+        width: 90%;
+        padding: 1rem;
+    }
+    .section-1 h2, .section-2 h2, .section-3 h2 {
+        font-size: 1.5rem;
+    }   
+    .card-product {
+        width: 90%;
+        height: auto;
+    }
+}
+
