@@ -71,7 +71,7 @@ input {
     width: 80%;
     border: 1px solid #ccc;
 }
-.enviar-btn {
+.enviar-btn, .reset-btn {
     width: 6rem;
     padding: 0.6rem;
     border: none;
@@ -80,6 +80,11 @@ input {
     background-color: #007bff;
     color: white;
     cursor: pointer;
+}
+.error {
+    color: #ff4d4d;
+    margin-top: 1rem;
+    font-size: 1.2rem;
 }
 footer {
     width: 100%;

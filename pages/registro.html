@@ -21,12 +21,20 @@
     </header>
     <main>
         <section class="registro">
-            <form class="formulario" action="" method="POST">
+            <form class="formulario" id="formulario" action="" method="POST">
             <h2>Registrate</h2>
+                <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre">
                 <input type="email" name="email" id="email" placeholder="Escriba su correo">
                 <input type="password" name="password" id="password" placeholder="Escriba su contraseña">
-                <button class="enviar-btn" type="submit">Ingresar</button>
+                <button class="enviar-btn" id="enviar-btn" type="submit">Registrar</button>
+                <button class="reset-btn" type="reset">Limpiar</button>
             </form>
+            <div id="error_nombre_vacio" class="error"></div>
+            <div id="error_email_vacio" class="error"></div>
+            <div id="error_password_vacio" class="error"></div>
+
+            <div id="error_email_formato" class="error"></div>
+            <div id="error_password_formato" class="error"></div>
         </section>
     </main>
      <footer>

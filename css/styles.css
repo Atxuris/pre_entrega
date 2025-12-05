@@ -87,6 +87,12 @@ ul, li, a {
     list-style:none;
     font-size: 1.2rem;
 }
+.carrito{
+    width: 8%;
+    height: auto;
+    margin-right: 10rem;
+    cursor: pointer;
+}
 main {
     width: 100%;
     display: flex;
@@ -264,6 +270,114 @@ textarea {
     background-color: #007bff;
     color: white;
     cursor: pointer;
+}
+.modal {
+    display: none; /* Oculta la modal por defecto */
+    position: fixed;
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+}
+.modal-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #1c1a1a;
+    margin: 15% auto; /* Centrar verticalmente */
+    padding: 5rem;
+    border: 1px solid #888;
+    max-width: 50%;
+    height: auto;
+    border-radius: 0.5rem;
+    border-style: none;
+}
+.btn-rojo {
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+.btn-verde {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+/* Botón de Cerrar (la 'X') */
+.cerrar-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.item-carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: auto;
+    font-size: 1.2rem;
+    gap: 1.5rem;
+    border-bottom: 1px dashed #eee;
+    padding: 10px 0;
+}
+.item-carrito p {
+    margin: 0;
+    flex-grow: 1;
+}
+.carrito-resumen {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+#carrito-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f7e7e7;
+}
+.carrito-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* El círculo del contador */
+#contador-carrito {
+    position: absolute;
+    top: 100px; /* Ajusta la posición vertical */
+    right: 155px; /* Ajusta la posición horizontal */
+    background-color: #dc3545; /* Rojo llamativo */
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-align: center;
+    min-width: 15px;
 }
 footer {
     text-align: center;

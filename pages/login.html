@@ -21,12 +21,17 @@
     </header>
     <main>
         <section class="ingresar">
-            <form class="formulario" action="https://formspree.io/f/mgvgzwqo" method="POST">
-            <h2>Iniciar Sesión</h2>
+            <form class="formulario" id="formulario" action="" method="">
+                <h2>Iniciar Sesión</h2>
                 <input type="email" name="email" id="email" placeholder="Escriba su correo">
                 <input type="password" name="password" id="password" placeholder="Escriba su contraseña">
-                <button class="enviar-btn" type="submit">Ingresar</button>
+                <button class="enviar-btn" id="enviar-btn" type="submit">Ingresar</button>
+                <button class="reset-btn" type="reset">Limpiar</button>
             </form>
+        <div id="empty_email" class="error"></div>
+        <div id="empty_password" class="error"></div>
+        <div id="email_error" class="error"></div>
+        <div id="password_error" class="error"></div>
         </section>
     </main>
      <footer>

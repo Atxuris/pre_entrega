@@ -24,11 +24,15 @@
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#ofertas">Ofertas</a></li>
             </ul>
+            <!-- Se crearon las págs de login y registro y se vincularon al index a través de estos enlaces -->
             <ul>
                 <li><a href="./pages/login.html">Ingresar</a></li>
                 <li><a href="./pages/registro.html">Crear cuenta</a></li>
                 <li><a href="#contacto">Contactanos</a></li>
             </ul>
+            <div class="carrito-container"></div>
+            <img class="carrito" id="icono-carrito" src="/images/carrito-de-compras-2.svg" alt="carrito de compras"><span id="contador-carrito">0</span> 
+            </div>
         </nav>
     </header>
     <main>
@@ -171,11 +175,11 @@
         </section>
         <section class="section-3" id="contacto">
             <h2>Contactanos</h2>
-                <form class="formulario" action="https://formspree.io/f/xovgwgwp" method="POST">
+            <form class="formulario" id="formulario" action="https://formspree.io/f/xovgwgwp" method="POST">
                 <input type="text" name="name" id="name" placeholder="Escriba su nombre">
                 <input type="email" name="email" id="email" placeholder="Escriba su correo">
                 <textarea rows="10" name="mensaje" id="mensaje" placeholder="Escriba su mensaje"></textarea>
-                <button class="enviar-btn" type="submit" >Enviar</button>
+                <button class="enviar-btn" id="enviar-btn" type="submit" >Enviar</button>
                 <!-- your other form fields go here -->
                 </form>
             </form>
@@ -184,6 +188,24 @@
 
         </section>
     </main>
+    <div id="modal-carrito" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" id="cerrar-modal">&times;</span>
+            <h2>🛍️ Tu Carrito de Compras</h2>
+        
+            <div class="item-carrito" id="productos-en-carrito">
+                <p id="carrito-vacio-msg">El carrito está vacío.</p>
+            </div>
+        
+            <hr>
+        
+            <p>Total: <span id="carrito-total">0 ARS</span></p>
+            <div class="carrito-resumen">
+                <button id="vaciar-carrito-btn" class="btn-rojo">Vaciar Carrito</button>
+                <button id="finalizar-compra-btn" class="btn-verde">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2025 Infinity Design. All rights reserved.</p>            
     </footer>
