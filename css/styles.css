@@ -369,8 +369,8 @@ textarea {
 /* El círculo del contador */
 #contador-carrito {
     position: absolute;
-    top: 100px; /* Ajusta la posición vertical */
-    right: 155px; /* Ajusta la posición horizontal */
+    top: 5rem; /* Ajusta la posición vertical */
+    right: 4rem; /* Ajusta la posición horizontal */
     background-color: #dc3545; /* Rojo llamativo */
     color: white;
     border-radius: 50%;
