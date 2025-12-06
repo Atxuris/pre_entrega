@@ -1,6 +1,3 @@
-
-//DECLARACIÓN DE VARIABLES
-
 // Variables de Productos y Contador
 const botonesAgregar = document.querySelectorAll('.agregar_carrito');
 const contadorCarrito = document.getElementById('contador-carrito');
@@ -16,7 +13,6 @@ const botonVaciar = document.getElementById('vaciar-carrito-btn');
 
 //Carrito
 let carrito = JSON.parse(localStorage.getItem('carritoProductos')) || [];
-
 
 //FUNCIONES
 
@@ -108,7 +104,6 @@ function vaciarCarrito() {
     }
 }
 
-
 //Inicializa el contador al cargar la página
 actualizarContadorCarrito(); 
 
@@ -156,3 +151,4 @@ window.addEventListener('click', (e) => {
 });
 
 botonVaciar.addEventListener('click', vaciarCarrito);
+

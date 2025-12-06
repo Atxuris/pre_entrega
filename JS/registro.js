@@ -1,6 +1,6 @@
 const formulario = document.getElementById("formulario");
 
-// Función auxiliar para limpiar todos los mensajes de error
+//Función auxiliar para limpiar todos los mensajes de error
 function limpiarMensajesError() {
     document.getElementById("error_nombre_vacio").innerText = "";
     document.getElementById("error_email_vacio").innerText = "";
@@ -9,7 +9,7 @@ function limpiarMensajesError() {
     document.getElementById("error_password_formato").innerText = "";
 }
 
-// Escuchamos el evento SUBMIT del formulario
+//Escuchamos el evento SUBMIT del formulario
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();  
     
@@ -21,7 +21,7 @@ formulario.addEventListener("submit", (e) => {
     const inputEmail = document.getElementById("email").value.trim();
     const inputPassword = document.getElementById("password").value;  
 
-    // --- 1. Validaciones de Campos Vacíos ---
+    //Validaciones de Campos Vacíos
     
     if (inputNombre === "") {
         document.getElementById("error_nombre_vacio").innerText = "El nombre no puede estar vacío.";
@@ -38,17 +38,17 @@ formulario.addEventListener("submit", (e) => {
         hayErrores = true;
     } 
     
-    // Solo continuar con validaciones de formato si los campos no están vacíos
+    //Solo continuar con validaciones de formato si los campos no están vacíos
     if (!hayErrores) {
         
-        // --- 2. Validación de Formato de Email (Regex simple) ---
+        //Validación de Formato de Email
         const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!regexEmail.test(inputEmail)) {
             document.getElementById("error_email_formato").innerText = "Por favor, introduce un formato de correo electrónico válido.";
             hayErrores = true;
         }
 
-        // --- 3. Validación de Complejidad de Contraseña (Longitud Mínima) ---
+        //Validación de Complejidad de Contraseña (Longitud Mínima)
         const longitudMinima = 8;
         if (inputPassword.length < longitudMinima) {
             document.getElementById("error_password_formato").innerText = `La contraseña debe tener al menos ${longitudMinima} caracteres.`;
@@ -56,16 +56,14 @@ formulario.addEventListener("submit", (e) => {
         }
     }
     
-    // --- 4. Acción Final (Registro Exitoso) ---
-    if (!hayErrores) {
-        // Aquí iría el código para enviar los datos al servidor (fetch o AJAX)
-        
+    //Acción Final (Registro Exitoso)
+    if (!hayErrores) {        
         alert("¡Registro exitoso! Redirigiendo a la página de inicio.");
         window.location.href = "../index.html"; 
     }   
 });
 
-// Escuchamos el evento RESET para limpiar los mensajes de error si existe el botón <button type="reset">
+//Escuchamos el evento RESET para limpiar los mensajes de error si existe el botón <button type="reset">
 formulario.addEventListener("reset", () => {
     setTimeout(limpiarMensajesError, 50); 
 });
